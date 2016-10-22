@@ -1,9 +1,10 @@
-$(document).ready(function() {
-  $('.slide2').show();
-  $('.photographer-2').hide();
+$(function() {
+  $('.jqueryOptions').hide();
 
-  $('#open-close').click(function(event) {
-    event.preventDefault();
-    $('photographer-2').slideToggle();
+  $('#choose').change(function () {
+    $('.jqueryOptions').slideUp();
+    $('.jqueryOptions').removeClass('current-opt');
+    $("." + $(this).val()).slideDown();
+    $("." + $(this).val()).addClass('current-opt');
   });
 });

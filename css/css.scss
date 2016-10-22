@@ -82,7 +82,7 @@ body {
 
 .menu-home > .nav-link {
   color: rgb(32, 154, 40);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   font-family: ZurichBT;
@@ -107,14 +107,14 @@ body {
 
 .nav-link {
   color: rgb(255, 255, 255);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   font-family: ZurichBT;
 }
 
 .nav-item {
-  margin-right: 10px !important;
+  margin-right: 1px !important;
 }
 
 /*Contant*/
@@ -223,15 +223,22 @@ body {
   background-position: -720px -188px;
 }
 
-.gallery-picture {
-  .controls {
+.gallery-picture .controls{
     display: inline-block;
     left: 65%;
     bottom: 10%;
     margin-left: 1%;
     position: absolute;
-    z-index: 888;
+    z-index: 8888;
   }
+.gallery-picture label {
+    position: relative;
+    top: 10px;
+    -webkit-transition: background ease-in-out .5s;
+    -moz-transition: background ease-in-out .5s;
+    -o-transition: background ease-in-out .5s;
+    transition: background ease-in-out .5s;
+}
   label {
     margin: 25px 12px 0 16px;
     content: " ";
@@ -247,14 +254,6 @@ body {
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-    &:after {}
-    position: relative;
-    top: 10px;
-    -webkit-transition: background ease-in-out .5s;
-    -moz-transition: background ease-in-out .5s;
-    -o-transition: background ease-in-out .5s;
-    transition: background ease-in-out .5s;
-  }
 }
 
 .small-label {
@@ -264,14 +263,14 @@ body {
   left: 25%;
   z-index: 999;
   color: rgb(203, 203, 203);
-  &:hover {
+}
+.small-label:hover {
     position: relative;
     top: 10%;
     font-size: 90%;
     left: 35%;
     z-index: 999;
   }
-}
 
 .gallery-picture label:hover, #slide1:checked ~ .controls label:nth-of-type(1), #slide2:checked ~ .controls label:nth-of-type(2), #slide3:checked ~ .controls label:nth-of-type(3), #slide4:checked ~ .controls label:nth-of-type(4), #slide5:checked ~ .controls label:nth-of-type(5) {}
 
@@ -344,7 +343,6 @@ body {
 }
 
 /*photographer*/
-
 .photographer {
   z-index: 9999;
   background: url(../image/sprite.gif) no-repeat;
@@ -410,6 +408,31 @@ body {
 }
 
 /*tabs- menu*/
+
+.tabs_block {
+margin-left: -10px;
+}
+
+.tabs_block:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+.tabs li {
+    float:left;
+}
+
+
+/* блоки вкладок с содержанием */
+.box {
+   margin-top:5px;
+    display:none;
+    text-align: left;
+    float: left;
+}
+.visible, .open_tab {
+    display: block;
+}
 
 .col-margin {
   margin-left: -10px;
@@ -601,7 +624,7 @@ background-position: -67px -188px;
   width: 196px;
   height: 34px;
   background-position: -12px -145px;
-  padding-top: 2%;
+  padding-top: 2.7%;
 }
 
 .text-search-holidays {
@@ -620,7 +643,7 @@ background-position: -67px -188px;
   background-position: -312px -194px;
   position: absolute;
   top: 26.8%;
-  left: 75%;
+  left: 78%;
 }
 
 .search-form {
@@ -719,7 +742,7 @@ background-position: -67px -188px;
 }
 
 .search-text {
-  font-size: 14px;
+  font-size: 13px;
   font-family: KlavikaMedium;
   font-weight: 600;
   color: rgb(255, 255, 255);
@@ -764,13 +787,12 @@ background-position: -67px -188px;
 }
 
 .text-button-sign-up {
-  font-size: 14px;
+  font-size: 12px;
   font-family: KlavikaMedium;
   font-weight: 600;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
-  padding: 5%;
-  padding-left: 10%;
+  padding: 5% 0 5% 7%;
 }
 
 /*news menu*/
